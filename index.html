@@ -1,0 +1,49 @@
+<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <!-- Required meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>On-Farm Storage Case Study</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body { margin:0; padding:0; }
+    </style>
+</head>
+
+<body>
+
+  <div class="sidebar">
+      <h2>Parcel Info</h2>
+      <div id ='content'></div>
+  </div>
+
+<div class='legend'>
+<h3>The Maximum Capacity</h3>
+<div id = 'legend'><span style='background-color: #f0f9e8'></span> &nbsp 0 - 50,000 bushels</div>
+<div id = 'legend'><span style='background-color: #bae4bc'></span> &nbsp 50,000 - 75,000 bushels</div>
+<div id = 'legend'><span style='background-color: #7bccc4'></span> &nbsp 75,000 - 100,000 bushels</div>
+<div id = 'legend'><span style='background-color: #43a2ca'></span> &nbsp 100,000 - 250,000 bushels</div>
+<div id = 'legend'><span style='background-color: #0868ac'></span> &nbsp 250,000 + bushels</div>
+<br>
+<div id = 'legend'><span style='background-color: #FFC000'></span> &nbsp Grain Bins</div>
+<div id = 'legend'><span style='background-color: #DBDBDB'></span> &nbsp Agricultural Parcels</div>
+</div>
+
+  <!-- Map -->
+  <div id= "map" class="map" width=100%></div>
+
+  <script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoieWF5aW5jIiwiYSI6ImNqcDM1N3ZzbTAyMmgzcXA5d2ZqcTh0N2sifQ.dU7iux42WDlRB3xvdL_s7w';
+
+  </script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
+  <script src="script.js"></script>
+</body>
+</html>
