@@ -20,7 +20,7 @@ We can check whether a parcel is municipal based on two criteria: <br>
 Next, we can spatial join the "parcels" geodataframe to the "buildings" geodataframe. By doing so, every building will be joined to all parcels if the building footprint intersects with the parcel. <br>Considering that one building footprint may intersect with more than one parcel (actually this case is very rare), we can group by building id, and summarize by the "maximum" value of the municipal field ("muni"). If a building footprint intersects with at least one municipal parcel, the building will be seen as "municipal building". After this step, we can remove all municipal building. <br>
 Although in this analysis, there is no municipal building in the geodataframe, we can replicate the analysis to other datasets as well.<br>
 - Second, we can calculate the bottom area of the grain bins (sqft) based on the diameter. 
-- Third, we only care about agricultural parcels. To select out agricultural parcels, we can filter by "FARM_ACRE" (the farmland area of the parcel). We can select out all parcels whose farmland area is more than zero. These parcels are regarded as agricultural parcels. <br>
+- Third, we only care about agricultural parcels. To select out agricultural parcels, we can filter by "FARM_ACRES" (the farmland area of the parcel). We can select out all parcels whose farmland area is more than zero. These parcels are regarded as agricultural parcels. <br>
 <br><br>
 
 
