@@ -30,7 +30,7 @@ Now, we have two datasets after data wrangling. One dataset contains all grain b
 - Second, we want to separate all multipolygons. If two polygons are not adjacent to each other, we want to separate them into two single polygons even though they have the same owner.<br>
 - Third, we spatial join the dissolved polygons (already exploded in the above step) with the grain bins. Then, we can group by the polygon id, and summarize by the sum of the bottom areas. In this step, 
 we are able to know the sum of the bottom areas of all grain bins which intersect with the polygons. <br>
-- Next, we can calculate the minimum total volume and the maximum total volume of the grain bins for each polygon, based on the minimum height (15 feet), and maximum height (54 feet). <br>
+- Next, we can calculate the minimum total volume and the maximum total volume of the grain bins for each polygon, based on the minimum height (15 feet), and maximum height (54 feet)(Here I couldn't find the height, so I used the range of diameter as the range of height, since they were close). <br>
 The formula is: volume = bottom area * height.<br>
 - Last, we want to estimate the capacity based on the volume. Based on the experience, we can roughly estimate:<br>
 bushels = volume * 0.85<br>
