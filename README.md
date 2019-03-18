@@ -1,10 +1,10 @@
 # Case Study: On-farm Storage Capacity Analysis
 ## 0. Notes
 There are several items in this repo:<br>
-(1) Case Study.html, HTML file exported through Jupyter Notebook, the code for data preparation and spatial analysis<br>
+ - (1) Case Study.html, HTML file exported through Jupyter Notebook, the code for data preparation and spatial analysis<br>
 View it here: http://htmlpreview.github.io/?https://github.com/YayinC/casestudy-on-farm-storage/blob/master/Case%20Study.html
 <br>
-(2) Case Study.ipynb, the Jupyter Notebook which presents the analysis, the code for data preparation and spatial analysis<br>
+ - (2) Case Study.ipynb, the Jupyter Notebook which presents the analysis, the code for data preparation and spatial analysis<br>
 (3) Case Study.py, the Python script which can repeat the analysis, the code for data preparation and spatial analysis<br>
 (4) script.js, JavaScript file, the code for data visualization<br>
 (5) index.html, HTML file, the code for data visualization<br>
