@@ -1,21 +1,20 @@
 # Case Study: On-farm Storage Capacity Analysis
 ## 0. Notes
 There are several items in this repo:<br>
- - (1) Case Study.html, HTML file exported through Jupyter Notebook, the code for data preparation and spatial analysis<br>
+ - Case Study.html, HTML file exported through Jupyter Notebook, the code for data preparation and spatial analysis<br>
 View it here: http://htmlpreview.github.io/?https://github.com/YayinC/casestudy-on-farm-storage/blob/master/Case%20Study.html
-<br>
- - (2) Case Study.ipynb, the Jupyter Notebook which presents the analysis, the code for data preparation and spatial analysis<br>
-(3) Case Study.py, the Python script which can repeat the analysis, the code for data preparation and spatial analysis<br>
-(4) script.js, JavaScript file, the code for data visualization<br>
-(5) index.html, HTML file, the code for data visualization<br>
-(6) Reset.css & style.css, css file, the code for data visualization <br><br>
+ - Case Study.ipynb, the Jupyter Notebook which presents the analysis, the code for data preparation and spatial analysis
+ - Case Study.py, the Python script which can repeat the analysis, the code for data preparation and spatial analysis
+ - script.js, JavaScript file, the code for data visualization
+ - index.html, HTML file, the code for data visualization
+ - Reset.css & style.css, css file, the code for data visualization <br><br>
 
 ## 1. Data Cleaning and Wrangling
-Before conducting the spatial analysis, we should clean the data and do some data wrangling. We have several steps:<br>
-(1) First, we want to remove the buildings that are located on the municipal parcels, because they are not grain bins. 
+Before conducting the spatial analysis, we should clean the data and do some data wrangling. We have several steps:
+   First, we want to remove the buildings that are located on the municipal parcels, because they are not grain bins. 
 We can check whether a parcel is municipal based on two criteria: <br>
-a. If a parcel is a municipal parcel, the parcel owner name doesn't include "LLC", "LTD", "INC", "CO", "CORP" or "COMPANY", and<br>
-b. If a parcel owner name includes "STATE", "CITY", "COUNTY", "DEPT" or "BUREAU", the parcel should be a municipal parcel<br>
+   a. If a parcel is a municipal parcel, the parcel owner name doesn't include "LLC", "LTD", "INC", "CO", "CORP" or "COMPANY", and<br>
+   b. If a parcel owner name includes "STATE", "CITY", "COUNTY", "DEPT" or "BUREAU", the parcel should be a municipal parcel<br>
 Then we can create a new column indicating whether it is a municipal parcel (0/1). <br>
 Next, we can spatial join the "parcels" geodataframe to the "buildings" geodataframe. By doing so, every building will be joined to all parcels
 if the building footprint intersects with the parcel. Considering that one building footprint may intersect with more than one parcel (actually this case is very rare), we can group by building id, and summarize by the "maximum" value of the municipal field ("muni"). If a building footprint intersects with at least one municipal parcel, the building will be seen as "municipal building". After this step, we can remove all municipal building. <br>
