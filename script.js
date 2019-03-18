@@ -49,26 +49,24 @@ var loadlayers = function(){
               "fill-opacity": 0.1
           }
       });
-
-
     map.addLayer({
-          "id": "parcels_bins",
-          "type": "fill",
-          "source": "parcels_bins",
-          "paint": {
-              "fill-color": {
-                property: 'bushels_54',
-                stops: [
-                    [60000, maxColors[0]],
-                    [80000, maxColors[1]],
-                    [120000, maxColors[2]],
-                    [250000, maxColors[3]],
-                    [1000000, maxColors[4]]]
-                  },
-              "fill-opacity": 0.75
-          }
-          });
-
+           "id": "parcels_bins",
+           "type": "fill",
+           "source": "parcels_bins",
+           "paint": {
+                 "fill-color": [
+                  "step",
+                   ['get', 'bushels_54'],
+                    maxColors[0],
+                    60000, maxColors[1],
+                    80000,maxColors[2],
+                    120000,maxColors[3],
+                    250000,maxColors[4]
+                    ],
+                  "fill-opacity": 0.75
+                   }
+            });
+      
     map.addLayer({
             "id": "grainbins",
             "type": "fill",
