@@ -78,27 +78,6 @@ var loadlayers = function(){
                 "fill-opacity": 0.75
           }
           });
-
-/**
-map.addLayer({
-  "id": "parcels_bin",
-  "type": "fill",
-  "source": "parcels_bins",
-  "paint": {
-      "fill-color": [
-        'interpolate',
-        ['linear'],
-        ['get', 'bushels_30'],
-          0, '#f0f9e8',
-          50000, '#bae4bc',
-          100000, '#7bccc4',
-          2000000, '#43a2ca',
-          300000, '#0868ac'
-      ],
-      "fill-opacity": 0.75
-    }
-  });
-**/
       });
 };
 
