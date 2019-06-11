@@ -41,4 +41,4 @@ Through the above analysis, we get the estimated range of the volume/capacity of
 (only considering the agricultural polygons which intersect with the footprint of the grain bins)<br>
 We can map the analysis using Mapbox GL. On this map, as we move the mouse, the owner name and the estimated range of storage capacity will show on the sidebar. Also, we can click the grain bins and see the radius and the area of the grain bins. <br>
 The map can be found here:<br>
-https://yayinc.github.io/casestudy-on-farm-storage/
+https://yayinc.github.io/CaseStudy-On-Farm-Storage/
